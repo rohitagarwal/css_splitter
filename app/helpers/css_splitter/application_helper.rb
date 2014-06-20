@@ -10,9 +10,7 @@ module CssSplitter
 
         [
           stylesheet_link_tag(source, options),
-          "<!--[if lte IE 9]>",
           stylesheet_link_tag(*split_sources),
-          "<![endif]-->"
         ]
       end.flatten.join("\n").html_safe
     end
